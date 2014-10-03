@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="app/lib/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <script src="app/lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/script/index1.js"></script>
+    <link rel="stylesheet" href="../angular_js/app/lib/bootstrap-3.2.0-dist/fonts/fontawesome-webfont.woff"/>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>input.ng-invalid.ng-dirty{background: pink}</style>
+
+</head>
+<body >
+
+<div class="myDemo">
+
+    <!--<input type="text" ng-model="name">-->
+    <!--f.name:<h2>{{name}}</h2>-->
+
+
+<!--</div>-->
+
+<!--<div  ng-controller="mainController">-->
+    <!--<input type ="text" ng-model="last" >-->
+    <!--l.name<h2>{{last}}</h2>-->
+<!--</div>-->
+
+<!--<div  ng-controller="mainController">-->
+    <!--<input type="text" ng-model="text">-->
+     <!--<a href="#">{{text}}</a>-->
+<!--</div>-->
+
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="col-md-3"><a href="#" title="Home">new</a></li>
+            </ul>
+        </div>
+    </div>
+   <div ng-controller="newController">
+       <div class="container">
+           <h2>New Event</h2>
+           <hr />
+           <form name="newEditForm">
+               <fieldset>
+                   <label for="eventName">Event Name:</label>
+                   <input id="eventName" type="text" ng-model="event.name" required placeholder="Enter Name">
+                   <label for="eventDate">Event Date:</label>
+                   <input id="eventDate" type="text" ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" required  placeholder="(mm/dd/yyyy)">
+               </fieldset>
+               <button type="submit" ng-click="saveEvent(event,newEditForm)" class="btn btn-primary">Save</button>
+           </form>
+       </div>
+   </div>
+</div>
+
+
+</div>
+
+
+</body>
+<!--<script type="text/javascript">-->
+<!--//    function demo($scope){-->
+<!--//        $scope.last = ' ';-->
+<!--//    }-->
+<!--</script>-->
+</html>

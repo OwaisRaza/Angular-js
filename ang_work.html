@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="app/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="app/lib/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <script src="app/lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/script/index1.js"></script>
+    <script src="app/script/ang_work.js"></script>
+    <link rel="stylesheet" href="../angular_js/app/lib/bootstrap-3.2.0-dist/fonts/fontawesome-webfont.woff"/>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--<style>input.ng-invalid.ng-dirty{color: red}</style>-->
+
+</head>
+<body >
+
+
+
+<div class="container">
+ <div class="row">
+     <div class="col-md-12" ng-controller="workController">
+         <div class="col-md-5 left_col">
+             <form name="submitNewEvent" ng-submit="submitNew()">
+                 <fieldset>
+                     <input type="text" placeholder="Name" ng-model="user.name" required/>
+                     <input type="email" placeholder="Email" ng-model="user.email" required/>
+                     <input type="text" placeholder="phone Number" ng-model="user.phone" required/>
+                     <input type="text" placeholder="Massage" ng-model="user.massage" required/>
+                 </fieldset>
+                 <button type="submit" value="submit" class="btn btn-success" >Submit</button>
+             </form>
+             <ol>
+                 <!--kisi oje ko track karne ke ley-->
+                 <li ng-repeat="user in users track by $index">
+                     <h4>{{user.name}}</h4><a href="#">{{user.email}}</a><p>{{user.phone}}</p><p>{{user.massage}}</p>
+                 </li>
+             </ol>
+         </div>
+     </div>
+ </div>
+</div>
+
+
+
+
+</body>
+
+</html>

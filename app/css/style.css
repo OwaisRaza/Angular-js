@@ -1,0 +1,11 @@
+
+.left_col{
+    margin-top: 25px;
+    padding: 95px 0;
+    text-align: center;
+    background: whitesmoke;
+}
+.left_col input{
+    margin: 4px;
+}
+

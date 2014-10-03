@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="app/lib/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <script src="app/lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/script/index1.js"></script>
+    <script src="app/script/test.js"></script>
+</head>
+<body >
+
+<div class="myDemo" ng-controller="testController">
+     <form>
+        <input type="text" ng-model="name">
+         <button ng-click="addItem()">add</button>
+     </form>
+    <ul>
+        <li ng-repeat="user in users">{{user.name}}</li>
+    </ul>
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>
