@@ -76,5 +76,6 @@ app.controller('newController',function newController($scope){
                 if(newEditForm.$valid ){
                 window.alert('event' + ' ' + event.name + ' ' + 'saved')
                 }
-            }
+            };
+    $scope.isOpen = false;
 });

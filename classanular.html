@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="app/lib/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <script src="app/lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/script/index1.js"></script>
+    <link rel="stylesheet" href="../angular_js/app/lib/bootstrap-3.2.0-dist/fonts/fontawesome-webfont.woff"/>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>input.ng-invalid.ng-dirty{background: pink}</style>
+
+</head>
+<body >
+
+
+<div ng-controller="demo1">
+    <input type="text" ng-model="name">
+    <input type="button" value="button" ng-click="addItem()">
+    <!--<h1>{{name}}</h1>-->
+    <ul>
+        <li ng-repeat="item in items">{{item.name}}</li>
+    </ul>
+</div>
+<!--<div ng-controller="demo2">-->
+    <!--<input type="text" ng-model="name">-->
+    <!--<h1>{{name}}</h1>-->
+<!--</div>-->
+
+
+</body>
+<script type="text/javascript">
+    function demo1($scope){
+        $scope.name = 'owais';
+
+        $scope.items = [
+            {
+                name:'owais'
+            }
+        ];
+
+        $scope.addItem = function(){
+            console.log('h1');
+            if(!$scope.name )return;
+            $scope.items.push({name:$scope.name});
+            $scope.name = '';
+        }
+    }
+    function demo2($scope){
+        $scope.name = 'Raza';
+    }
+</script>
+</html>

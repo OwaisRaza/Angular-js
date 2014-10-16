@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="app/lib/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <script src="app/lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+    <script src="app/lib/angular.min.js"></script>
+    <script src="app/script/index1.js"></script>
+    <link rel="stylesheet" href="../angular_js/app/lib/bootstrap-3.2.0-dist/fonts/fontawesome-webfont.woff"/>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        .myDiv{
+            background: darkolivegreen;
+            height: 300px;
+            position: relative;
+        }
+        .myDiv h2{
+            color: #ffffff;
+        }
+        .myDiv span{
+            position: absolute;
+            right: 5px;
+            top: 0;
+            color: #ffffff;
+            font-size: 30px;
+        }
+        .animate-show {
+            transition:all linear 0.5s;
+            opacity:1;
+        }
+
+        .animate-show.ng-hide {
+            opacity:0;
+        }
+    </style>
+
+</head>
+<body >
+
+
+
+<div class="container" style="margin: 20px">
+
+   <div ng-controller="newController">
+       <button class="btn btn-primary btn-group-lg pull-left" ng-click="isOpen = true;">click</button>
+        <div class="col-md-8 myDiv animate-show" ng-show="isOpen">
+            <h2>world</h2>
+            <span ng-click="isOpen = false;">x</span>
+        </div>
+   </div>
+</div>
+
+
+
+
+</body>
+<!--<script type="text/javascript">-->
+<!--//    function demo($scope){-->
+<!--//        $scope.last = ' ';-->
+<!--//    }-->
+<!--</script>-->
+</html>
